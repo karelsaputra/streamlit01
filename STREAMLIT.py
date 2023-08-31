@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 st.write("""# Network Partner SLA Checker""")
 
-url = "https://raw.githubusercontent.com/karelsaputra/streamlit01/main/HASIL AKHIR processed.csv
+url = "https://raw.githubusercontent.com/karelsaputra/streamlit01/main/HASIL AKHIR processed.csv"
 df = pd.read_csv(url)
 # FM
 distinct_fm_partners_list = df['FM partner'].dropna().unique().tolist()
