@@ -4,8 +4,14 @@ import matplotlib.pyplot as plt
 
 st.write("""# Network Partner SLA Checker""")
 
-url = "https://raw.githubusercontent.com/karelsaputra/streamlit01/main/HASIL AKHIR processed.csv"
-df = pd.read_csv(url)
+# Replace spaces with %20 in the file name
+file_name = "HASIL%20AKHIR%20processed.csv"
+
+# Construct the raw GitHub URL
+raw_url = f"https://raw.githubusercontent.com/username/repository/master/path/to/{file_name}"
+
+# Read the CSV file using the updated URL
+df = pd.read_csv(raw_url)
 # FM
 distinct_fm_partners_list = df['FM partner'].dropna().unique().tolist()
 # Count the occurrences of each distinct FM partner
