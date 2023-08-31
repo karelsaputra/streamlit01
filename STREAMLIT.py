@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 
 st.write("""# Network Partner SLA Checker""")
 
-df = pd.read_csv("C:\\Users\\karel\\Downloads\\HASIL AKHIR processed.csv")
+url = "https://raw.githubusercontent.com/karelsaputra/streamlit01/main/HASIL AKHIR processed.csv
+df = pd.read_csv(url)
 # FM
 distinct_fm_partners_list = df['FM partner'].dropna().unique().tolist()
 # Count the occurrences of each distinct FM partner
