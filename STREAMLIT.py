@@ -4,11 +4,14 @@ import matplotlib.pyplot as plt
 
 st.write("""# Network Partner SLA Checker""")
 
-# Replace spaces with %20 in the file name
+# Replace placeholders with actual values
+username = "karelsaputra"
+repository = "streamlit01"
+branch = "main"
 file_name = "HASIL%20AKHIR%20processed.csv"
 
 # Construct the raw GitHub URL
-raw_url = f"https://raw.githubusercontent.com/username/repository/master/path/to/{file_name}"
+raw_url = f"https://raw.githubusercontent.com/{username}/{repository}/{branch}/{file_name}"
 
 # Read the CSV file using the updated URL
 df = pd.read_csv(raw_url)
